@@ -37,6 +37,7 @@
             this.btnHitungMK = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnHitungDosen = new System.Windows.Forms.Button();
+            this.btnUpdateMK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -93,9 +94,9 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(478, 340);
+            this.btnUpdate.Location = new System.Drawing.Point(481, 340);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(77, 23);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -111,11 +112,21 @@
             this.btnHitungDosen.UseVisualStyleBackColor = true;
             this.btnHitungDosen.Click += new System.EventHandler(this.btnHitungDosen_Click);
             // 
+            // btnUpdateMK
+            // 
+            this.btnUpdateMK.Location = new System.Drawing.Point(333, 383);
+            this.btnUpdateMK.Name = "btnUpdateMK";
+            this.btnUpdateMK.Size = new System.Drawing.Size(107, 23);
+            this.btnUpdateMK.TabIndex = 8;
+            this.btnUpdateMK.Text = "Update MK";
+            this.btnUpdateMK.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdateMK);
             this.Controls.Add(this.btnHitungDosen);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnHitungMK);
@@ -140,6 +151,7 @@
         private System.Windows.Forms.Button btnHitungMK;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnHitungDosen;
+        private System.Windows.Forms.Button btnUpdateMK;
     }
 }
 
