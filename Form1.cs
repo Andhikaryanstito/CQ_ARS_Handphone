@@ -56,19 +56,26 @@ namespace PraktikumADO
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        // --- LATIHAN 2: UPDATE SKS MATA KULIAH ---
         private void btnUpdateMK_Click(object sender, EventArgs e)
+        {
+            try { Koneksi(); conn.Open(); string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'"; cmd = new SqlCommand(query, conn); int hasil = cmd.ExecuteNonQuery(); MessageBox.Show("Berhasil! Jumlah baris Mata Kuliah terpengaruh: " + hasil); conn.Close(); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        // --- LATIHAN 3: INSERT PROGRAM STUDI ---
+        private void btnInsertProdi_Click(object sender, EventArgs e)
         {
             try
             {
                 Koneksi();
                 conn.Open();
 
-                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
+                // Query Latihan 3 untuk memasukkan data baru ke tabel ProgramStudi
+                string query = "INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')";
                 cmd = new SqlCommand(query, conn);
 
                 int hasil = cmd.ExecuteNonQuery();
-                MessageBox.Show("Berhasil! Jumlah baris Mata Kuliah terpengaruh: " + hasil);
+                MessageBox.Show("Berhasil Insert! Jumlah baris yang ditambah: " + hasil);
 
                 conn.Close();
             }

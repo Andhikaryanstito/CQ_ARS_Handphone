@@ -131,6 +131,7 @@
             this.btnInsertProdi.TabIndex = 9;
             this.btnInsertProdi.Text = "Insert Prodi";
             this.btnInsertProdi.UseVisualStyleBackColor = true;
+            this.btnInsertProdi.Click += new System.EventHandler(this.btnInsertProdi_Click);
             // 
             // Form1
             // 
