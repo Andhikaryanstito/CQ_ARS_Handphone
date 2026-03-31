@@ -50,21 +50,25 @@ namespace PraktikumADO
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        // --- LATIHAN 1: HITUNG JUMLAH DOSEN ---
         private void btnHitungDosen_Click(object sender, EventArgs e)
+        {
+            try { Koneksi(); conn.Open(); string query = "SELECT COUNT(*) FROM Dosen"; cmd = new SqlCommand(query, conn); int jumlah = (int)cmd.ExecuteScalar(); txtHasil.Text = jumlah.ToString(); conn.Close(); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        // --- LATIHAN 2: UPDATE SKS MATA KULIAH ---
+        private void btnUpdateMK_Click(object sender, EventArgs e)
         {
             try
             {
-                Koneksi(); 
-                conn.Open(); 
+                Koneksi();
+                conn.Open();
 
-                // Query dari soal Latihan 1
-                string query = "SELECT COUNT(*) FROM Dosen";
+                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
                 cmd = new SqlCommand(query, conn);
 
-                int jumlah = (int)cmd.ExecuteScalar();
-
-                txtHasil.Text = jumlah.ToString();
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Berhasil! Jumlah baris Mata Kuliah terpengaruh: " + hasil);
 
                 conn.Close();
             }

@@ -120,6 +120,7 @@
             this.btnUpdateMK.TabIndex = 8;
             this.btnUpdateMK.Text = "Update MK";
             this.btnUpdateMK.UseVisualStyleBackColor = true;
+            this.btnUpdateMK.Click += new System.EventHandler(this.btnUpdateMK_Click);
             // 
             // Form1
             // 
