@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtHasil = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnConnect = new System.Windows.Forms.Button();
+            this.btnHitungMhs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,11 +58,31 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(76, 340);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(75, 23);
+            this.btnConnect.TabIndex = 3;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            // 
+            // btnHitungMhs
+            // 
+            this.btnHitungMhs.Location = new System.Drawing.Point(191, 340);
+            this.btnHitungMhs.Name = "btnHitungMhs";
+            this.btnHitungMhs.Size = new System.Drawing.Size(104, 23);
+            this.btnHitungMhs.TabIndex = 4;
+            this.btnHitungMhs.Text = "Hitung Mhs";
+            this.btnHitungMhs.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHitungMhs);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.txtHasil);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -75,6 +97,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHasil;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Button btnHitungMhs;
     }
 }
 
