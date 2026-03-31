@@ -15,13 +15,30 @@ namespace PraktikumADO
     {
         SqlConnection conn;
         SqlCommand cmd;
+
         public Form1()
         {
             InitializeComponent();
         }
+
         private void Koneksi()
         {
             conn = new SqlConnection("Data Source=LAPTOP-7SOCNODM\\ANDHIKA1; Initial Catalog=DBAkademikADO; Integrated Security=True");
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi(); 
+                conn.Open(); 
+                MessageBox.Show("Koneksi ke database berhasil!"); 
+                conn.Close(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
