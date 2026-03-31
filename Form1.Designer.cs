@@ -109,6 +109,7 @@
             this.btnHitungDosen.TabIndex = 7;
             this.btnHitungDosen.Text = "Hitung Dosen";
             this.btnHitungDosen.UseVisualStyleBackColor = true;
+            this.btnHitungDosen.Click += new System.EventHandler(this.btnHitungDosen_Click);
             // 
             // Form1
             // 
